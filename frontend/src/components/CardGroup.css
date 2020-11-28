@@ -1,0 +1,13 @@
+.card-group {
+	display: flex;
+	flex-direction: column;
+	padding: 5rem 5rem;
+	width: 85%;
+	margin: 0 auto;
+}
+
+.no-blogs-text {
+	font-weight: 600;
+	font-size: 2rem;
+	margin: 0 auto;
+}

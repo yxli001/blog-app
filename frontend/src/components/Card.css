@@ -1,0 +1,41 @@
+.card {
+	padding: 1.5rem 2rem;
+	margin-bottom: 2rem;
+	border: 2px solid var(--color-light-1);
+	border-radius: 4px;
+	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card__title {
+	font-size: 3rem;
+	font-weight: 300;
+	text-decoration: none;
+	color: var(--color-dark-2);
+	margin-bottom: 1.8rem;
+}
+
+.card__title:hover {
+	color: var(--color-primary-dark);
+	text-decoration: underline;
+}
+
+.card__author {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 0.2rem;
+
+	display: flex;
+	align-items: center;
+}
+
+.card__time {
+	margin-left: 1rem;
+	font-size: 1rem;
+}
+
+.card__content {
+	font-size: 1.2rem;
+}
