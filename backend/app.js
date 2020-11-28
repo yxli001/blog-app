@@ -1,6 +1,7 @@
 // import packages
 const express = require("express");
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 // setup port number
 const PORT = 8888 | process.env.PORT;
@@ -24,11 +25,19 @@ app.use((req, res, next) => {
 	next();
 });
 
-mongoose.connect("mongodb://localhost:27017/blogDB", {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-	useFindAndModify: false,
-});
+// mongo atlas credentials
+const db_username = process.env.DB_USERNAME;
+const db_password = process.env.DB_PASSWORD;
+mongoose
+	.connect(
+		`mongodb+srv://${db_username}:${db_password}@cluster0.blct3.mongodb.net/blogs?retryWrites=true&w=majority`,
+		{
+			useNewUrlParser: true,
+			useUnifiedTopology: true,
+			useFindAndModify: false,
+		}
+	)
+	.catch((error) => console.log(error));
 
 // import models
 const Blog = require("./models/Blog");
