@@ -40,7 +40,7 @@ import Card from "./Card";
 const CardGroup = () => {
 	const [blogs, setBlogs] = useState([]);
 
-	fetch("http://localhost:8888/blogs", {
+	fetch("http://192.168.0.14:8888/blogs", {
 		mode: "cors",
 	})
 		.then((response) => response.json())

@@ -10,7 +10,7 @@ const Card = (props) => {
 	const [redirect, setRedirect] = useState(false);
 
 	function handleDelete() {
-		fetch(`http://localhost:8888/blog/${props.id}`, {
+		fetch(`http://192.168.0.14:8888/blog/${props.id}`, {
 			method: "DELETE", // *GET, POST, PUT, DELETE, etc.
 			mode: "cors", // no-cors, *cors, same-origin
 			redirect: "follow", // manual, *follow, error

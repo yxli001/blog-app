@@ -10,7 +10,7 @@ const EditBlog = () => {
 	let [editBlog, setEditBlog] = useState({});
 
 	async function getBlog() {
-		const response = await fetch(`http://localhost:8888/blog/${bid}`);
+		const response = await fetch(`http://192.168.0.14:8888/blog/${bid}`);
 		const data = await response.json();
 
 		setEditBlog(await data.blog);
@@ -20,7 +20,7 @@ const EditBlog = () => {
 
 	return (
 		<Form
-			action={`http://localhost:8888/blog/${bid}`}
+			action={`http://192.168.0.14:8888/blog/${bid}`}
 			method="PUT"
 			edit={true}
 			editBlog={editBlog}

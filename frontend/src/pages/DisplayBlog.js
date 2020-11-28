@@ -12,7 +12,7 @@ const DisplayBlog = () => {
 	const [redirect, setRedirect] = useState(false);
 
 	async function getBlog() {
-		const response = await fetch(`http://localhost:8888/blog/${bid}`);
+		const response = await fetch(`http://192.168.0.14:8888/blog/${bid}`);
 		const data = await response.json();
 		setBlog(await data.blog);
 	}
