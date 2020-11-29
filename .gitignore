@@ -7,6 +7,8 @@
 /frontend/.pnp
 /frontend/.pnp.js
 
+/frontend/.eslintcache
+
 #.env files
 /backend/.env
 
@@ -26,3 +28,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
