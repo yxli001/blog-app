@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 // setup port number
-const PORT = 8888 | process.env.PORT;
+const PORT = process.env.PORT | 8888;
 
 // setup express
 const app = express();
